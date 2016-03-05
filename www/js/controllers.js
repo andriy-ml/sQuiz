@@ -55,6 +55,7 @@ app.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
+
 .controller('QuizzesController', function($scope, $stateParams) {
     $scope.quizzes = [
       { title: 'Javascript', id: 1},

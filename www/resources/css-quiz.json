@@ -1,0 +1,78 @@
+{
+  "quizId":2,
+  "quizName":"CSS Quiz",
+  "questions": [
+    {
+      "id": 0,
+      "question": "Which of the following selector selects all paragraph elements whose lang attribute has a value of exactly \"fr\"?",
+      "variants": {
+        "0": "p[lang]",
+        "1": "p[lang=\"fr\"]",
+        "2": "C - p[lang~=\"fr\"]",
+        "3": "D - p[lang|=\"fr\"]"
+      },
+      "rightAnswer": "1",
+      "comments": "No comments"
+    },
+    {
+      "id": 1,
+      "question": "Which of the following defines a measurement in centimeters?",
+      "variants": {
+        "0": "%",
+        "1": "cm",
+        "2": "em",
+        "3": "ex"
+      },
+      "rightAnswer": "1",
+      "comments": "No comments"
+    },
+    {
+      "id": 2,
+      "question": "Which of the following defines a measurement in picas?",
+      "variants": {
+        "0": "in",
+        "1": "mm",
+        "2": "pc",
+        "3": "pt"
+      },
+      "rightAnswer": "2",
+      "comments": "No comments"
+    },
+    {
+      "id": 3,
+      "question": "Which of the following property is used to underline, overline, and strikethrough text?",
+      "variants": {
+        "0": "text-indent",
+        "1": "text-align",
+        "2": "text-decoration",
+        "3": "text-transform"
+      },
+      "rightAnswer": "2",
+      "comments": "No comments"
+    },
+    {
+      "id": 4,
+      "question": "Which of the following property is used to set the width of an image border?",
+      "variants": {
+        "0": "border",
+        "1": "height",
+        "2": "width",
+        "3": "moz-opacity"
+      },
+      "rightAnswer": "0",
+      "comments": "No comments"
+    },
+    {
+      "id": 5,
+      "question": "Which of the following property specifies whether a long point that wraps to a second line should align with the first line or start underneath the start of the marker of a list?",
+      "variants": {
+        "0": "list-style-type",
+        "1": "list-style-position",
+        "2": "list-style-image",
+        "3": "list-style"
+      },
+      "rightAnswer": "1",
+      "comments": "No comments"
+    }
+  ]
+}

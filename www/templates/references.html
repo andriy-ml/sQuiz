@@ -1,0 +1,30 @@
+<ion-view view-title="References" cache-view="false">
+  <ion-content>
+    <div class="list">
+      <div class="item item-divider">
+        Javascript Quizzes
+      </div>
+      <div ng-repeat="jsRef in references.javascript" class="item">
+        <a href="{{jsRef.url}}" target="_blank">{{jsRef.title}}</a>
+      </div>
+      <div class="item item-divider">
+        CSS/CSS3 Quizzes
+      </div>
+      <div ng-repeat="cssRef in references.css" class="item">
+        <a href="{{cssRef.url}}" target="_blank">{{cssRef.title}}</a>
+      </div>
+      <div class="item item-divider">
+        Exercises
+      </div>
+      <div ng-repeat="exRef in references.exercises" class="item">
+        <a href="{{exRef.url}}" target="_blank">{{exRef.title}}</a>
+      </div>
+      <div class="item item-divider">
+        Documentation
+      </div>
+      <div ng-repeat="docRef in references.documentation" class="item">
+        <a href="{{docRef.url}}" target="_blank">{{docRef.title}}</a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

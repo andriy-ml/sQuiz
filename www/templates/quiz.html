@@ -1,0 +1,53 @@
+<ion-view view-title="{{title}}" cache-view="false">
+  <ion-content>
+<div id="quiz" ng-hide="showResults">
+  <div class="row">
+    <div class="col">
+      <h5>{{currentPage}}. {{questions[currentPage-1].question}}</h5>
+      <div ng-if="questions[currentPage-1].code" class="row"><code>{{questions[currentPage-1].code}}</code></div>
+      <div ng-repeat="(key,variant) in questions[currentPage-1].variants">
+        <ion-radio ng-model="questions[currentPage-1].answer" ng-value="key">{{variant}}</ion-radio>
+        <!--input type="radio" ng-model="questions[currentPage-1].answer" value="{{key}}"> {{variant}}-->
+      </div>
+        <label class="item item-input" ng-if="!questions[currentPage-1].variants">
+            <input type="text" class="form-control" ng-model="questions[currentPage-1].answer"/>
+        </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="btn-group" role="group">
+        <button type="button" class="button button-positive" ng-click="prev()" ng-if="!firstPage">Previous</button>
+        <button type="button" class="button button-positive" ng-click="next()" ng-if="!lastPage">Next</button>
+        <button type="button" class="button button-positive" ng-click="finish()" ng-if="lastPage">Finish</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="results" ng-if="showResults">
+  <div class="row">
+    <div class="col">
+      <h4>Your score is {{score}}%</h4>
+        <div class="btn-group" role="group">
+          <button type="button" class="button button-positive" ng-click="new()">Start New Quiz</button>
+        </div>
+      <div class="row">
+        <ion-list>
+          <ion-item ng-repeat="wrongAnswer in wrongAnswers">
+            <div>Question: {{wrongAnswer.question}}
+              <div ng-if="wrongAnswer.code"><code>{{wrongAnswer.code}}</code></div></div>
+            Right answer:
+            <span ng-if="wrongAnswer.variants">{{wrongAnswer.variants[wrongAnswer.rightAnswer]}}</span>
+            <span ng-if="!wrongAnswer.variants">{{wrongAnswer.rightAnswer}}</span><br/>
+            <spna ng-if="wrongAnswer.answer">Your answer:</spna>
+            <spna ng-if="!wrongAnswer.answer">Your don't have any answer</spna>
+            <span ng-if="wrongAnswer.variants">{{wrongAnswer.variants[wrongAnswer.answer]}}</span>
+            <span ng-if="!wrongAnswer.variants">{{wrongAnswer.answer}}</span>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </div>
+</div>
+  </ion-content>
+</ion-view>

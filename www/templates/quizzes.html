@@ -1,0 +1,185 @@
+<ion-view view-title="Quizzes">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="quiz in quizzes" href="#/app/quizzes/{{quiz.id}}">
+        {{quiz.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+What is printed in the console?
+
+var foo = function foo() {
+console.log(foo === foo);
+};
+foo();
+
+true
+false
+RefError
+
+What does the above alert?
+function aaa() {
+return
+{
+test: 1
+};
+}
+alert(typeof aaa());
+function
+number
+object
+undefined
+
+What is the result?
+Number("1") - 1 == 0;
+true
+false
+TypeError
+
+What is the result? (false)?
+(true + false) > 2 + true;
+true
+false
+TypeError
+NaN
+
+What is alerted?
+function bar() {
+return foo;
+foo = 10;
+function foo() {}
+var foo = '11';
+}
+alert(typeof bar());
+number
+function
+undefined
+string
+Error
+
+What is the result? ANS: 2
+"1" -- "1"
+0
+2
+11
+"11"
+
+What is the order of values alerted? A: 3,1
+var x = 3;
+var foo = {
+x: 2,
+baz: {
+x: 1,
+bar: function() {
+return this.x;
+}
+}
+}
+var go = foo.baz.bar;
+alert(go());
+alert(foo.baz.bar());
+1,2
+1,3
+2,1
+2,3
+3,1
+3,2
+
+
+
+What is the result?
+[] + [] + 'foo'.split('');
+"f,o,o"
+TypeError
+["f","o","o"]
+[][]["f","o","o"]
+
+What is the result?
+new Array(5).toString();
+",,,,"
+[]
+"[]"
+
+What is printed in the console?
+var myArr = ['foo', 'bar', 'baz'];
+myArr.length = 0;
+myArr.push('bin');
+console.log(myArr);
+["foo","bar","baz"]
+['foo','bar','baz','bin']
+['bin','foo','bar','baz']
+['bin']
+
+What is printed on the console? A: undefined
+var x = 0;
+function foo() {
+x++;
+this.x = x;
+return foo;
+}
+var bar = new new foo;
+console.log(bar.x);
+ReferenceError
+TypeError
+undefined
+0
+1
+
+What is the result? A: NaN
+var bar = 1,
+foo = {};
+foo: {
+bar: 2;
+baz: ++bar;
+};
+foo.baz + foo.bar + bar;
+ReferenceError
+TypeError
+undefined
+NaN
+4
+5
+
+What is the result of console.log?
+var myArr = ['foo', 'bar', 'baz'];
+myArr[2];
+console.log('2' in myArr);
+true
+false
+ReferenceError
+
+What value is alerted?
+var arr = [];
+arr[0]  = 'a';
+arr[1]  = 'b';
+arr.foo = 'c';
+alert(arr.length);
+1
+2
+3
+undefined
+
+
+
+What value is alerted? a: undefined
+function foo(a, b) {
+arguments[1] = 2;
+alert(b);
+}
+foo(1);
+2
+undefined
+RefError
+
+
+
+
+
+
+
+
+
+
+

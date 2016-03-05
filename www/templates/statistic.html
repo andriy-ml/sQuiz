@@ -1,0 +1,9 @@
+<ion-view view-title="Statistic" cache-view="false">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="stat in statistic"">
+        {{stat.title}} {{stat.score}}% {{stat.dateTime | date:"MM/dd/yyyy 'at' h:mma"}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
